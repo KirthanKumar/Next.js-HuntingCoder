@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Head from "next/head";
+import Script from "next/script";
 import styles from "../app/styles/home.module.css"
 
 export default function Home() {
@@ -8,6 +9,8 @@ export default function Home() {
       <Head>
         <title>Hunting Coder</title>
       </Head>
+
+      <Script src="/sc.js" strategy="lazyOnload"></Script>
 
       <main className={styles.main}>
         <h1 className={styles.title}>Hunting Coder</h1>
