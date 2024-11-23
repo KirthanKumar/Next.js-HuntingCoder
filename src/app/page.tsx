@@ -3,20 +3,24 @@ import Head from "next/head";
 import Script from "next/script";
 import Link from "next/link";
 import styles from "../app/styles/home.module.css"
+import styles1 from "../app/styles/Home1.module.css"
+import styles2 from "../app/styles/Home2.module.css"
 
 export default function Home() {
+  console.log(styles);
   return (
     <div className={styles.container}>
       <Head>
         <title>Hunting Coder</title>
       </Head>
 
+
       {/* <Script src="/sc.js" strategy="lazyOnload"></Script> */}
 
       <nav className={styles.mainnav}>
         <ul>
-          <Link legacyBehavior href="/"><a><li>Home</li></a></Link>
-          {/* <Link href="/about"><a><li>About</li></a></Link> */}
+          <Link href="/"><li>Home</li></Link>
+          <Link href="/about"><li>About</li></Link>
           {/*Invalid <Link> with <a> child. Please remove <a> or use <Link legacyBehavior>. */}
           <Link href="/blog"><li>Blog</li></Link>
           <Link href="/contact"><li>Contact</li></Link>
@@ -39,7 +43,7 @@ export default function Home() {
 
         <h2>Popular Blogs:</h2>
 
-        <div className={styles.grid}>
+        <div className={`${styles1.con} ${styles2.con}`}>
           <div className={styles.card}>
             <h3>How to Learn JavaScript in 2022?</h3>
             <p>JavaScript is the language used to design the logic for the web.</p>
