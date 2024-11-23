@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Head from "next/head";
 import Script from "next/script";
+import Link from "next/link";
 import styles from "../app/styles/home.module.css"
 
 export default function Home() {
@@ -14,10 +15,11 @@ export default function Home() {
 
       <nav className={styles.mainnav}>
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Blog</li>
-          <li>Contact</li>
+          <Link legacyBehavior href="/"><a><li>Home</li></a></Link>
+          {/* <Link href="/about"><a><li>About</li></a></Link> */}
+          {/*Invalid <Link> with <a> child. Please remove <a> or use <Link legacyBehavior>. */}
+          <Link href="/blog"><li>Blog</li></Link>
+          <Link href="/contact"><li>Contact</li></Link>
         </ul>
       </nav>
 
